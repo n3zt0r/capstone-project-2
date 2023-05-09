@@ -1,0 +1,405 @@
+:root {
+    --fuentePortada: 'Bubblegum Sans', cursive;
+    --fuentePrincipal: 'Lora', serif;
+    --fuenteSecundaria: 'Open Sans', sans-serif;
+    --colorUno: #463730ff;
+    --colorDos: #1f5673ff;
+    --colorTres: #759FBC;
+    --colorCuatro: #90c3c8ff;
+    --colorCinco: #b0c0c2;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+h2,
+h3 {
+    color: var(--colorCinco);
+    font-size: 3rem;
+    font-family: var(--fuentePrincipal);
+    margin: 10px 0 30px 0;
+}
+
+p {
+    font-family: var(--fuenteSecundaria);
+    text-align: center;
+    margin: 10px auto 0;
+    color: var(--colorTres);
+}
+
+/*-------------------------------- Navegacion --------------------------------*/
+header {
+    background-color: rgba(31, 87, 117, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px 1px 10px 1px #ffffff;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 100;
+    color: var(--colorCuatro);
+    font-family: var(--fuenteSecundaria);
+}
+
+header>p {
+    font-size: 1.2rem;
+    padding-left: 20px;
+    font-family: var(--fuentePortada);
+    margin: 0;
+    color: var(--colorCinco);
+}
+
+.navBar {
+    list-style-type: none;
+    display: flex;
+    padding-right: 20px;
+    margin: 0;
+    height: 100%;
+}
+
+.navBar>li>a {
+    display: inline-flex;
+    color: var(--colorCuatro);
+    text-decoration: none;
+    align-items: center;
+    padding: 20px 10px;
+}
+
+.navBar>li>a:hover {
+    color: var(--colorDos);
+    background-color: var(--colorCuatro);
+    transition: 1s;
+}
+
+/*-------------------------------- Inicio --------------------------------*/
+.portada {
+    top: 0%;
+    flex-direction: column;
+    background-color: var(--colorTres)
+}
+
+.fondo {
+    position: absolute;
+    display: flex;
+    background-image: url(./img/Fondo.jpg);
+    background-size: cover;
+    background-position-x: center;
+    width: 100%;
+    height: 100vh;
+    filter: opacity(30%);
+}
+
+h1 {
+    z-index: 10;
+    color: #ffffff;
+    font-size: 4rem;
+    margin: 10px;
+    font-family: var(--fuentePortada);
+}
+
+.portada p {
+    z-index: 10;
+    font-size: 2rem;
+    margin: 0;
+    color: var(--colorUno);
+    font-weight: 200;
+}
+
+/*-------------------------------- Acerca de --------------------------------*/
+#acerca {
+    top: 100vh;
+    flex-direction: column;
+}
+
+#acerca img {
+    width: 200px;
+    border-radius: 30px;
+    border: 5px solid var(--colorDos);
+    box-shadow: 10px 10px 15px 10px var(--colorCinco);
+}
+
+#acerca p {
+    text-align: center;
+    width: 30%;
+    margin: 0;
+}
+
+/*------------------------------- Experiencia -------------------------------*/
+#experiencia {
+    top: 200vh;
+}
+
+.contenedor2 {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 0 40px;
+    flex-wrap: wrap;
+    width: 95%;
+    height: 65vh;
+}
+
+.cajas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 10px 10px 15px 10px var(--colorCinco);
+    width: 25%;
+    height: 25vh;
+    transition: 0.75s;
+}
+
+.cajas:hover {
+    background-color: var(--colorCuatro);
+}
+
+.cajas:hover p,
+.cajas:hover h3 {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.cajas h3 {
+    text-align: center;
+    margin: 0px auto;
+    font-size: 1.5rem;
+    color: var(--colorUno);
+}
+
+/*------------------------------- Habilidades -------------------------------*/
+#habilidades {
+    top: 300vh;
+}
+
+.cajas img {
+    height: 80px;
+}
+
+/*------------------------------- Proyectos -------------------------------*/
+#proyectos {
+    top: 400vh;
+}
+
+#contProyect {
+    align-items: center;
+}
+
+.paginas {
+    text-decoration: none;
+    background-color: var(--colorDos);
+    box-shadow: 10px 10px 15px 10px var(--colorCinco);
+    height: 50vh;
+    flex: 1;
+    transition: all 1s;
+    border-radius: 20px;
+    filter: grayscale(100%) blur(2px);
+}
+
+.imgProyect {
+    height: 50vh;
+    border-radius: 20px;
+}
+
+.paginas:hover {
+    flex: 3;
+    filter: grayscale(0%) blur(0px);
+}
+
+/*------------------------------- Contacto -------------------------------*/
+#contacto {
+    top: 500vh;
+}
+
+.enfasis {
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+#contacto a {
+    text-decoration: none;
+    color: var(--colorCinco);
+    transition: all 1s;
+}
+
+#contacto>a {
+    background-color: var(--colorCuatro);
+    color: #ffffff;
+    margin-top: 50px;
+    padding: 15px 30px;
+    border-radius: 15px;
+}
+
+#contacto>a:hover {
+    background-color: var(--colorDos);
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    background-color: var(--colorDos);
+    width: 100%;
+    margin: 0;
+}
+
+.pie {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 50px;
+    color: var(--colorCinco);
+    font-family: var(--fuenteSecundaria);
+    margin-bottom: 40px;
+}
+
+#contacto a:hover {
+    color: #ffffff;
+}
+
+footer p {
+    font-size: .75em;
+    margin-bottom: 15px;
+}
+
+/*------------------------------------ Modo ------------------------------------*/
+/*--------------------------------- celulares ---------------------------------*/
+
+@media only screen and (max-width: 768px) {
+
+    /*------------------------------ Navegacion ------------------------------*/
+    header>p {
+        font-size: 1.5rem;
+
+    }
+
+    .navBar li:nth-child(n+2) {
+        display: none;
+    }
+
+    /*-------------------------------- Inicio --------------------------------*/
+    h1 {
+        font-size: 3em;
+        text-align: center;
+    }
+
+    .portada p {
+        font-size: 1.5em;
+    }
+
+    /*-------------------------------- Acerca de --------------------------------*/
+    #acerca p {
+        font-size: 1.25em;
+        width: 50%;
+    }
+
+    /*------------------------------- Experiencia -------------------------------*/
+    .cajas {
+        width: 30%;
+        height: 18vh;
+    }
+
+    .cajas h3 {
+        width: 80%;
+        font-size: 1.5em;
+    }
+
+    .cajas p {
+        width: 80%;
+        font-size: .80em;
+    }
+
+    /*------------------------------- Proyectos -------------------------------*/
+    #contProyect {
+        flex-direction: column;
+    }
+
+    .paginas {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .paginas:hover {
+        flex: 10;
+    }
+
+    .imgProyect {
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+
+    .container {
+        position: static;
+        height: auto;
+        margin-bottom: 100px;
+    }
+
+    /*------------------------------ Navegacion ------------------------------*/
+    header {
+        background-color: rgba(31, 87, 117);
+    }
+
+    /*-------------------------------- Inicio --------------------------------*/
+    .portada {
+        height: 100vh;
+    }
+
+    /*-------------------------------- Acerca de --------------------------------*/
+
+    /*------------------------------- Experiencia -------------------------------*/
+    .contenedor2 {
+        gap: 30px;
+        width: 95%;
+        height: auto;
+    }
+
+    .cajas {
+        width: 60%;
+        height: 18vh;
+    }
+
+    /*------------------------------- Proyectos -------------------------------*/
+    .paginas {
+        flex: 0 0 200px;
+        filter: none;
+        margin: 0;
+    }
+
+    .paginas:hover {
+        flex: 0 0 200px;
+    }
+
+    /*------------------------------- Contacto -------------------------------*/
+    #contacto {
+        margin: 0;
+    }
+
+    #contacto p {
+        width: 60%;
+    }
+
+    footer {
+        margin-top: 50px;
+        position: static;
+    }
+
+    .pie {
+        gap: 30px;
+    }
+}
